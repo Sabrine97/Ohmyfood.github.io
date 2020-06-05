@@ -1,30 +1,7 @@
-/*------------------------------------------*/
-/* ==            COLOR CODES               */
-/*----------------------------------------*/
-
 
 /*------------------------------------------*/
-/* ==            DEFINITIONS DES POLICES   */
+/* ==            ELEMENTS PRINCIPAUX       */
 /*----------------------------------------*/
-
-@keyframes point {
-  to {
-    opacity: 0;
-    transform: scale(0);
-  }
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes wiggle {
-  to {
-    transform: translate(2%);
-  }
-  from {
-    transform: translate(-2%);
-  }
-}
 #container {
   width: 100%;
   position: absolute;
@@ -47,12 +24,7 @@
   display: flex;
   justify-content: center;
 }
-@media (max-width: 599px) {
-  #container > header {
-    font-size: 25px;
-    height: 120px;
-  }
-}
+
 #container > footer {
   border-top: solid 2px #a1bf81;
   display: flex;
@@ -75,14 +47,7 @@
   animation: wiggle 150ms ease-in-out infinite;
   animation-direction: alternate;
 }
-@media (max-width: 599px) {
-  #container > footer ul li {
-    margin-left: 0px;
-  }
-  #container > footer ul li a {
-    font-size: 17px;
-  }
-}
+
 
 #pageprincipal {
   display: flex;
@@ -114,23 +79,13 @@
   justify-content: center;
   align-items: center;
 }
+  /* Animation menu */ 
+
 #pageprincipal section a:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
-@media (max-width: 599px) {
-  #pageprincipal section {
-    width: 200px;
-    height: 300px;
-  }
-  #pageprincipal section a {
-    width: 200px;
-    height: 300px;
-  }
-  #pageprincipal section p {
-    font-size: 30px;
-  }
-}
+
 
 aside {
   width: 400px;
@@ -143,15 +98,8 @@ aside {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 599px) {
-  aside {
-    width: 200px;
-    height: 25px;
-  }
-  aside h2 {
-    font-size: 15px;
-  }
-}
+
+
 
 #mini_menu1 {
   background-color: #fcdfdb;
@@ -159,22 +107,19 @@ aside {
   flex-direction: column;
 }
 #mini_menu1 h2 {
-  font-family: "devonshire";                    /*      devonshiiiire */ 
+  font-family: "devonshire";                     
   font-size: 50px;
   font-weight: normal;
 }
 #mini_menu1 p {
-  font-family: "flow";                              /*flow*/
+  font-family: "flow";                              
 }
 #mini_menu1 a {
   color: #3c1218;
 }
-@media (max-width: 599px) {
-  #mini_menu1 h2 {
-    font-size: 25px;
-  }
-}
 
+
+/* couleur icone */
 i {
   background: -webkit-linear-gradient(left, #f05060, #f6916a);
   -webkit-background-clip: text;
@@ -197,11 +142,6 @@ i {
 #mini_menu2 a {
   color: #e27f0e;
 }
-@media (max-width: 599px) {
-  #mini_menu2 h2 {
-    font-size: 12px;
-  }
-}
 
 #mini_menu3 {
   background-color: #edefef;
@@ -223,11 +163,6 @@ i {
 #mini_menu3 a {
   color: #0889fb;
 }
-@media (max-width: 599px) {
-  #mini_menu3 h2 {
-    font-size: 20px;
-  }
-}
 
 #mini_menu4 {
   background-color: #fff5fe;
@@ -248,12 +183,27 @@ i {
 #mini_menu4 a {
   color: #43973d;
 }
-@media (max-width: 599px) {
-  #mini_menu4 h2 {
-    font-size: 20px;
+
+
+/*Animation prochainement */
+@keyframes point {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+  from {
+    opacity: 1;
+    transform: scale(1);
   }
 }
-
+@keyframes wiggle {
+  to {
+    transform: translate(2%);
+  }
+  from {
+    transform: translate(-2%);
+  }
+}
 #suspension {
   display: flex;
   justify-content: space-around;
@@ -314,6 +264,7 @@ i {
   width: 20%;
   text-align: end;
 }
+      /* trait image (section) */
 #menu1 section header, #menu2 section header, #menu3 section header, #menu4 section header {
   display: flex;
   justify-content: space-between;
@@ -325,6 +276,7 @@ i {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+/* soulignement */ 
 #menu1 section header h3:hover::after, #menu2 section header h3:hover::after, #menu3 section header h3:hover::after, #menu4 section header h3:hover::after {
   transform: scaleX(1);
 }
@@ -339,44 +291,7 @@ i {
   height: 3px;
   margin-bottom: 0px;
 }
-@media (max-width: 599px) {
-  #menu1, #menu2, #menu3, #menu4 {
-    padding: 30px 0 30px 0;
-  }
-  #menu1 section, #menu2 section, #menu3 section, #menu4 section {
-    width: 90%;
-  }
-  #menu1 section ul, #menu2 section ul, #menu3 section ul, #menu4 section ul {
-    padding-left: 0px;
-    width: 100%;
-  }
-  #menu1 section ul li, #menu2 section ul li, #menu3 section ul li, #menu4 section ul li {
-    width: 100%;
-    flex-direction: column;
-  }
-  #menu1 section ul li span, #menu2 section ul li span, #menu3 section ul li span, #menu4 section ul li span {
-    margin: 1px;
-    font-size: 20px;
-  }
-  #menu1 section ul .plats, #menu2 section ul .plats, #menu3 section ul .plats, #menu4 section ul .plats {
-    width: 100%;
-    text-align: center;
-  }
-  #menu1 section ul .prix, #menu2 section ul .prix, #menu3 section ul .prix, #menu4 section ul .prix {
-    width: 100%;
-    text-align: center;
-  }
-  #menu1 section header, #menu2 section header, #menu3 section header, #menu4 section header {
-    flex-direction: column;
-    margin: 0px;
-  }
-  #menu1 section header h3, #menu2 section header h3, #menu3 section header h3, #menu4 section header h3 {
-    margin-top: 0px;
-  }
-  #menu1 section header h3::after, #menu2 section header h3::after, #menu3 section header h3::after, #menu4 section header h3::after {
-    display: none;
-  }
-}
+
 
 #menu1 {
   font-size: 25px;
@@ -402,6 +317,7 @@ i {
   justify-content: space-between;
   margin-bottom: 0px;
 }
+/* menu enchantÃ© footer */ 
 #menu1 footer {
   font-family: 'Devonshire', cursive;
   font-size: 50px;
@@ -410,6 +326,7 @@ i {
 #menu1 footer i {
   font-size: 40px;
 }
+/* taille des images*/
 #menu1 img {
   width: 35%;
   height: 40%;
@@ -417,24 +334,14 @@ i {
 #menu1 h3::after {
   color: #3c1218;
 }
-@media (max-width: 599px) {
-  #menu1 h2 {
-    font-size: 45px;
-  }
-  #menu1 li {
-    margin-bottom: 20%;
-  }
-  #menu1 footer {
-    font-size: 30px;
-  }
-}
+
 
 #menu2 {
   font-size: 25px;
   background-color: #fff5fe;
 }
 #menu2 h2 {
-  font-family: 'Croissant One', cursive;                /*croissantone*/
+  font-family: 'Croissant One', cursive;                
   background: -webkit-linear-gradient(left, #e27f0e, #8f5aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -461,19 +368,12 @@ i {
 #menu2 #dessert h3::after {
   color: #6e4ccc;
 }
+/* taille image */
 #menu2 img {
   width: 30%;
   height: 40%;
 }
-@media (max-width: 599px) {
-  #menu2 h2 {
-    font-size: 40px;
-    margin-bottom: 20%;
-  }
-  #menu2 li {
-    margin-bottom: 15%;
-  }
-}
+
 
 #menu3 {
   font-size: 35px;
@@ -481,7 +381,7 @@ i {
   font-family: "smile";
 }
 #menu3 h2 {
-  font-family: "dancing";                                         /* dainciiing*/
+  font-family: "dancing";                                        
   background: -webkit-linear-gradient(left, #0229dd, #0889fb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -490,6 +390,7 @@ i {
 #menu3 h3 {
   font-size: 35px;
 }
+/* taille image */
 #menu3 img {
   width: 30%;
   height: 40%;
@@ -503,15 +404,7 @@ i {
 #menu3 #dessert h3::after {
   color: #229df9;
 }
-@media (max-width: 599px) {
-  #menu3 h2 {
-    font-size: 45px;
-    margin-bottom: 15%;
-  }
-  #menu3 li {
-    margin-bottom: 15%;
-  }
-}
+
 
 #menu4 {
   font-size: 30px;
@@ -529,21 +422,13 @@ i {
 #menu4 h3 {
   font-size: 50px;
 }
+/* taille image */ 
 #menu4 img {
   width: 30%;
   height: 40%;
 }
 #menu4 h3::after {
   color: #80cb5e;
-}
-@media (max-width: 599px) {
-  #menu4 h2 {
-    font-size: 45px;
-    margin-bottom: 20%;
-  }
-  #menu4 li {
-    margin-bottom: 15%;
-  }
 }
 
 a {
@@ -553,7 +438,7 @@ a {
 ul {
   list-style: none;
 }
-
+/* mention */
 #mentions {
   font-family: "Metropolis";
   font-size: 20px;
@@ -565,3 +450,108 @@ ul {
   margin: 50px;
   color: #fdcb46;
 }
+
+/* Media queries */ 
+
+@media (max-width: 599px) {
+  #container > footer ul li {
+    margin-left: 0px;
+  }
+  #container > footer ul li a {
+    font-size: 17px;
+  }
+      #container > header {
+        font-size: 25px;
+        height: 120px;
+      }
+
+  aside {
+    width: 200px;
+    height: 25px;
+  }
+  aside h2 {
+    font-size: 15px;
+  }
+  #pageprincipal section {
+    width: 200px;
+    height: 300px;
+  }
+  #pageprincipal section a {
+    width: 200px;
+    height: 300px;
+  }
+    #mini_menu1 h2 {
+      font-size: 20px;
+    }
+
+    #mini_menu4 h2 {
+      font-size: 20px;
+    }
+    #mini_menu3 h2 {
+      font-size: 20px;
+    }
+    #mini_menu2 h2 {
+      font-size: 12px;
+    }
+    #pageprincipal section p {
+      font-size: 30px;
+    }
+  
+  }
+  @media (max-width: 780px) {
+    #menu1, #menu2, #menu3, #menu4 {
+      padding: 30px 0 30px 0;
+    }
+    #menu1 section, #menu2 section, #menu3 section, #menu4 section {
+      width: 90%;
+    }
+    #menu1 section ul, #menu2 section ul, #menu3 section ul, #menu4 section ul {
+      padding-left: 0px;
+      width: 100%;
+    }
+    #menu1 section ul li, #menu2 section ul li, #menu3 section ul li, #menu4 section ul li {
+      width: 100%;
+      flex-direction: column;
+    }
+    #menu1 section ul li span, #menu2 section ul li span, #menu3 section ul li span, #menu4 section ul li span {
+      margin: 1px;
+      font-size: 20px;
+    }
+    #menu1 section ul .plats, #menu2 section ul .plats, #menu3 section ul .plats, #menu4 section ul .plats {
+      width: 100%;
+      text-align: center;
+    }
+    #menu1 section ul .prix, #menu2 section ul .prix, #menu3 section ul .prix, #menu4 section ul .prix {
+      width: 100%;
+      text-align: center;
+    }
+    #menu1 section header, #menu2 section header, #menu3 section header, #menu4 section header {
+      flex-direction: column;
+      margin: 0px;
+    }
+    #menu1 section header h3, #menu2 section header h3, #menu3 section header h3, #menu4 section header h3 {
+      margin-top: 0px;
+    }
+    #menu1 section header h3::after, #menu2 section header h3::after, #menu3 section header h3::after, #menu4 section header h3::after {
+      display: none;
+    }
+  }
+  @media (max-width: 1090px) {
+    #menu1 h2 {
+      font-size: 45px;
+    }
+    #menu1 li {
+      margin-bottom: 20%;
+    }
+    #menu1 footer {
+      font-size: 30px;
+    }
+    #menu2 h2 {
+      font-size: 40px;
+      margin-bottom: 20%;
+    }
+    #menu2 li {
+      margin-bottom: 15%;
+    }
+  }
+
